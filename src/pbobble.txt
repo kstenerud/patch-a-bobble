@@ -1,0 +1,402 @@
+                                    Patch-A-Bobble
+
+                                      Release 1.3
+
+                             (c) 1997-2002 Karl Stenerud
+
+ 
+Forward Note:
+~~~~~~~~~~~~
+Please, DO NOT DISTRIBUTE THE MODIFIED ROMS!!!!  Distribute Patchfiles instead.
+There are certain legal implications to distributing program code that has
+been modified from the original form.
+Don't distribute the datafiles created by Patch-A-Bobble, either.  They
+contain the romfiles.
+
+This is why I created the patchfile format, which only saves your changes so
+that new bubble bobble levels can pass freely on the net.
+
+
+
+What's New:
+~~~~~~~~~~
+Release 1.3 (Jan 21, 2002)
+	- Changed loading routines to be more in line with the MAME romset names
+	- When loading roms, it will search for level data from all 4 bubble bobble
+      clones
+	- When saving roms, it will save level data in all 4 bubble bobble clones
+	- Tweaked the window size a bit to keep the bottom up/down control
+      accessible when using larger fonts.
+    - Fixed tile display for level 102
+    - Changed weapon item from potion to candy
+
+Release 1.2 (Apr 20, 1998)
+	- Fixed some loader bugs
+
+Release 1.1 (Apr 3, 1998)
+	- Added drop pattern editing
+	- Added smoothing option
+	- Cleaned up some more graphics routines
+	- added support for filemanager file associations
+
+Release 1.0 (Mar 14, 1998)
+        - Added Snap-to-grid option.
+        - Added a program icon =)
+        - Fixed bug that caused screen to appear in the wrong place.
+        - Added "About this patchfile" menuitem under "Help"
+        - Added some more graphics
+        - Replaced some low level code to make it more robust.
+
+Beta-1  (Nov 27, 1997):
+        - Added editing controls (copy, cut, paste, exchange, clear, revert)
+        - Added 2 buffer system
+        - Added more user-friendly features for loading and saving.
+          Load/Save roms now opens a filerequestor so you can load/save to
+          roms in any directory.
+        - Fixed the direction buttons
+        - Other bugfixes
+
+Alpha-2 (Nov 11, 1997):
+        - Relocated the "aliens" menuitem to a checkbox on the screen.
+        - Added support to read and write roms from bubble bobble and super
+          bobble bobble.
+        - Added option to view the levels as they would appear when the game
+          is in "Super" mode.
+
+Alpha-1 (Nov 7, 1997):
+        - Initial alpha-release
+
+
+
+Disclaimer:
+~~~~~~~~~~
+This software comes with no warranties, no guaranties, nothing whatsoever.
+Moreover, this is alpha software, which means it is largely untested, which
+means it is buggy.  Use at your own risk.
+Warning: Do not use this software unless you have a legal right to own and
+modify the Bubble Bobble roms.
+
+DO NOT DISTRIBUTE THIS PROGRAM WITH ROMS!!!!!!!!!
+
+
+
+What is it:
+~~~~~~~~~~
+Patch-A-Bobble is a visual level editor for the best game in the world,
+Bubble Bobble.
+It features a drag 'n drop system for placing monsters and objects, and a
+paint mode for setting the platforms, airflows etc.
+I've also introduced a bub patchfile system so people can share their custom
+bubble bobble levels easily with others.
+
+This program is a win32 application.
+
+
+
+Some things to note:
+~~~~~~~~~~~~~~~~~~~
+All of the graphics for Patch-A-Bobble are decoded from the bubble bobble roms
+at runtime so that there are no copyright problems.  Basically, this program
+will do NOTHING if you don't supply it with roms.
+
+
+
+Requirements:
+~~~~~~~~~~~~
+1. Original, unmodofied roms from either Bubble Bobble, Bobble Bobble, or
+   Super Bobble Bobble.
+2. A PC running win32 (Windows 95, Windows NT, or Windows 3.1 with Win32
+   extensions) in at least 640x480, 256 colors.
+   For best results, run in at least 800x600 with at least 32K colors.
+
+
+
+Installation:
+~~~~~~~~~~~~
+You must have the Bobble Bobble roms to run this program.
+
+Make a directory for Patch-A-Bobble somewhere.  Copy pbobble.exe there.
+Run pbobble.exe.  When it complains that it can't find the data files, it
+will ask you to point it to some roms for it to copy.  Select a file
+in the directory containing those roms.  (It doesn't matter what file you
+select.  You just have to do it to satisfy the Win32 file selector.)
+
+NOTE:  You MUST use unmodified roms in this process.
+
+
+Note: I've tried very hard to cram the whole thing into a window small enough
+      to fit on a 640x480 screen.  Nevertheless, you'll get the best results
+      on an 800x600 or higher screen in 32768 colors or higher.
+      It works in 256 colors, it just doesn't show all the colors all the time.
+
+
+
+Patch-A-Bobble's controls:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+From top to bottom:
+        The up-down controls on the top-right and bottom-right of the bubble
+        bobble screen change the top and bottom row types.
+
+        The combination edit box and up-down control is the level selector.
+
+        The "Sup" checkbox selects wether you want to view the levels in normal
+        mode or in "Super" mode.  NOTE: this control only lets you see what it
+        would look like if it were in "Super" mode.  "Super" mode can only be
+        enabled from within the game itself.
+
+        The Alien checkbox turns aliens mode on/off (turns all the robot
+        monsters into aliens if "Super" mode is not enabled).
+
+        The Palette up-down control lets you select the palette for this level.
+
+        The black box and left-right control displays the current mode you are
+        in, and lets you change the monster direction and type.
+
+        The "plus" thingy selects the paint mode (4 directions for airflow and
+        the middle to paint solid platform).
+
+        The sliders in the "Speed" box let you control the bubble speed and
+        the monster speed.
+
+        The sliders in the "Time Until" box let you control the time until
+        monsters break out of their bubbles, how long until "Hurry Up",
+        and how long after hurry up until Baron von Blubba appears.
+        The time is approximately in seconds, and some of them have an "Off"
+        value =)
+
+        The sliders in the "Rate" box let you specify the rate of water,
+        fire, and lightning bubbles that come into the screen.  The total of
+        all 3 cannot exceed 16.  So if you want to increase one, you may have
+        to decrease another.
+        Note: In order for this part to have any effect, you have to select a
+        top or bottom row type that allows bubbles to flow into the screen.
+
+        The up-down controls in the top and bottom right corner of the Bubble
+        Bobble screen control the top and bottom types.
+
+
+
+Menus:
+~~~~~
+        File:
+           Load Patchfile: Load a patchfile
+           Save Patchfile: Save a patchfile
+           Load Roms:      Load Bubble Bobble roms
+           Save Roms:      Save Bubble Bobble roms
+           Exit:           Quits
+
+        Edit:
+           Cut:        Cut the current screen into the clipboard
+           Paste:      Paste data from the clipboard to teh screen
+           Copy:       Copy data from the screen to the clipboard
+           Exchange:   Exchange the data in the clipboard with the screen
+           Clear:      Clear the current screen
+           Revert:     Revert the screen to its unmodified state
+           Clear All:  Clear the whole rom
+           Revert All: Revert the whole rom
+
+
+        Monster Ops:
+           Insert:            Insert a new monster
+           Remove:            Remove the selected monster
+           Invert:            Invert the selected monster
+           Aliens:            Toggle aliens mode on/off
+           Drop Pattern:      Select from standard drop patterns
+           Edit Drop Pattern: Make your own drop pattern
+           Test Drop Pattern: Test your drop pattern
+
+        Screen Ops:
+           Arrows:       Turn on/off the display of the airflow arrows.
+           Smoothing:    Toggle smoothing of sprites.
+           Super:        Turn on/off super mode
+           Snap to Grid: When moving or placing monsters or items, it
+                         will snap to a grid matching the platform.
+           Buffer A:     View Buffer A
+           Buffer B:     View Buffer B
+
+        Help:
+           About:                About the program
+           About This Patchfile: Information about the current patchfile.
+                                 This includes author, description, and
+                                 which levels have been modified.
+
+
+
+Using Patch-A-Bobble:
+~~~~~~~~~~~~~~~~~~~~
+Notes on pointer modes:
+        There are multiple pointer modes in this program.  The mode the
+        pointer is in is indicated by the black square on the top-right of the
+        window.  Default mode is indicated by just a black square.
+        In any other mode, there will be some graphic there to indicate what
+        mode you are in.
+        You can return to default mode at any time by pressing the right mouse
+        button within the Bubble Bobble screen area.
+
+How to move the points object and the weapon object:
+        Every level in Bubble Bobble has a points item (which gives points) and
+        a weapon item (which gives some special power).  The points item is
+        represented in Patch-A-Bobble by a cake, and the weapon item is
+        represented by a blue candy.
+        To move either of them, simply left-click on it to pick it up (make
+        sure you are in default mode!), move it to the desired location, and
+        then left-click again to drop it.
+        Note that if you try to drop it in an invalid region, it will drop as
+        close to that area as possible.
+
+How to move monsters:
+        Same thing as moving points and weapon objects.
+
+How to change monster direction:
+        When you have picked up a monster, left-click on the monster's portrait
+        in the mode-indicator square to the right of the window. (your mouse
+        will return to the normal pointer when you leave the bubble bobble
+        screen area, but will change back when you move it back in).
+        The monster will change direction.  Now you can put it back down,
+        or right-click in the bubble bobble screen area to drop it exactly
+        where it was before.
+
+How to change the monster type:
+        Pick up a monster and then click on the left/right arrows under the
+        mode-indicator square, then either place the monster back down or
+        right-click in the bubble bobble screen area to drop it exactly where
+        it was before.
+
+How to add monsters:
+        Select "Insert" from the monster-ops pulldown menu, then drop the
+        monster somewhere by left-clicking.
+
+How to remove monsters:
+        Pick up a monster and then select "Remove" from the monster-ops
+        pulldown menu.
+
+How to edit drop patterns:
+	Method 1: Select from some stock effects from "Drop Pattern" under
+	          monster-ops.
+	Method 2: Select "Edit Drop Pattern" under monster-ops.
+	          This will change the screen edit method to "drop mode" edit.
+	          The points item and weapon item will not be shown.
+	          When you select a monster, you will only be able to move it
+	          horizontally.  The higher up you move the monster, the later
+	          it will drop onto the screen.
+	          Select "Edit Drop Pattern" again to return to normal edit mode.
+
+Snap to Grid:
+        You can make it so that when you place monsters or items down, they
+        will snap to a grid matching the edges of the platforms.  Simply
+        select "Snap to Grid" from the "Screen Ops" menu.
+
+Make aliens:
+        By checking the "Alien" checkbox, all monsters of type 0 (the robot)
+        will change to aliens (Note: This only happens in normal mode, not
+        "Super" mode).
+
+Notes on platforms and airflow:
+        Platforms are the solid ground that bub and bob can walk on.
+        Everything else is and airflow, which determines what direction the
+        bubbles will travel in.
+
+Painting the screen:
+        You can paint your own platforms and airflows by selecting the
+        apporpriate direction from the "plus" thing on the top-right of the
+        window.
+        Select one of the four extremities to paint that direction of airflow,
+        or select the middle one to paint platforms.
+        Now when you click on the bubble bobble screen you will paint instead!
+        Right-click to go back to default mode.
+        Note: you can't paint on the top or bottom row of bubble bobble.  This
+        part is controlled by the top and bottom type selector controls located
+        on the top right and bottom right of the bubble bobble screen.
+
+Look at it without arrows:
+        You can view the screen without arrows by selecting "Toggle arrows"
+        from the screen-ops menu.  This doesn't turn the airflow off, but
+        rather stops Patch-A-Bobble from displaying them so that you can show
+        off those beautiful 4-bit graphics to your friends!
+
+Look at it in "Super" mode:
+        You can view the screen as the game would show it in "Super" mode by
+        checking the "S" checkbox.
+
+Revert to the original screen:
+        Select "revert" from the Edit menu to revert the current screen
+        back to its original state.
+
+Use multiple buffers:
+        Patch-A-Bobble has 2 buffers: A and B.  You can switch between these
+        buffers from the Screen Ops menu.
+        This is to allow you to load patchfiles into one buffer and copy the
+        screens you want to the level you want in your own rom.
+
+
+
+Saving your work:
+~~~~~~~~~~~~~~~~
+Saving a patchfile:
+        Select "Save Patchfile" from the File menu to save a patchfile that
+        other people can patch their roms with.
+        Please use this method unless you are modifying your own roms for
+        your own personal use.
+
+Saving to ROM:
+        When you want to try out your new bubble bobble roms, you must save
+        them to some buble bobble rom images.
+
+        Obviously, these files must exist in the directory you tell
+        Patch-A-Bobble to save to.
+
+        Note: Mame will complain that the checksums don't match anymore.
+
+
+Setting File Associations:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+	I've added support for file associations, but you'll have to set
+	up the filemanager association yourself.
+	To do this, select View->Options in a file display window, go to
+	file types and define a new type.
+	Put in a description, set the extension to .bub
+	Add a new action "open" and point it to the pbobble.exe file.
+	You can also change the icon in this dialog.
+
+
+Special Thanks:
+~~~~~~~~~~~~~~
+
+Special thanks goes to:
+        Chris Moore, for his help with the rom structure
+
+        Chris Moore, Oliver White, and Nicola Salmoria for writing the Mame
+        Bubble Bobble driver!
+
+        Nicola Salmoria and the Mame team for writing such a great emulator!
+
+
+
+Where to get it:
+~~~~~~~~~~~~~~~
+        I can never seem to keep a page up for longer than a year, but
+        www.zophar.net usually has a link to it.
+
+
+
+Contact the author:
+~~~~~~~~~~~~~~~~~~
+        You can contact me (Karl Stenerud) at kstenerud@mame.net
+
+
+
+Todo:
+~~~~
+        - Figure out how to do file-associations.
+
+
+
+Reporting bugs:
+~~~~~~~~~~~~~~
+        Before reporting a bug, make sure of some things:
+
+        1. Is it something that's not covered in the documentation?
+        2. Is it reproducible?
+
+        If you can answer yes to both of those, then send me an email
+        describing the process to reproduce this bug and I will fix it.

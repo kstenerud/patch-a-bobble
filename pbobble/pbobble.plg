@@ -1,0 +1,30 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: pbobble - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Strider\LOCALS~1\Temp\RSP273.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/pbobble.pdb" /debug /machine:I386 /out:"Debug/pbobble.exe" /pdbtype:sept 
+".\Debug\Bitbuff.obj"
+".\Debug\Gfxset.obj"
+".\Debug\Lvlset.obj"
+".\Debug\Pbobble.obj"
+".\Debug\Screen.obj"
+".\Debug\Util.obj"
+".\Debug\Pbobble.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Strider\LOCALS~1\Temp\RSP273.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+pbobble.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
